@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  owned_since: 2020-04-05 23:26:50
+  info: MyText
+  broken: false
+
+two:
+  title: MyString
+  owned_since: 2020-04-05 23:26:50
+  info: MyText
+  broken: false

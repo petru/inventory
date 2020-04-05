@@ -1,0 +1,22 @@
+<h1>add new item</h1>
+<%= form_with scope: :item, url: items_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :owned_since %><br>
+    <%= date_select :item, :start_date %>
+  </p>
+  <p>
+    <%= form.label :info %><br>
+    <%= form.text_area :info, size: "60x12" %>
+  </p>
+  <p>
+    <%= check_box_tag :broken %>
+    <%= label_tag :broken, 'This item is broken'%>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
