@@ -1,0 +1,23 @@
+<h1>Items</h1>
+<style>
+td { border: 1px solid #CCC;}
+</style>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Owned since</th>
+    <th>Broken?</th>
+    <th>Location</th>
+    <th>Info</th>
+  </tr>
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= link_to item.title, item_path(item) %></td>
+      <td><%= item.owned_since %></td>
+      <td><%= item.broken %><td>
+      <td><%= item.location %></td>
+      <td><%= item.info %></td>
+    </tr>
+  <% end %>
+
+</table>
