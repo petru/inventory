@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_05_202650) do
+ActiveRecord::Schema.define(version: 2020_04_05_205758) do
 
   create_table "items", force: :cascade do |t|
     t.string "title"
-    t.datetime "owned_since"
+    t.date "owned_since"
     t.text "info"
     t.boolean "broken"
     t.datetime "created_at", precision: 6, null: false
