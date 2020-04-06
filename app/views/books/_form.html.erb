@@ -24,6 +24,13 @@
     <%= form.text_field :year %>
   </p>
   <p>
+    <%= form.label :genre %><br>
+    <%= form.radio_button :genre, "fiction", checked: true %>
+    <%= form.label :genre_fiction, "fiction" %>
+    <%= form.radio_button :genre, "nonfiction" %>
+    <%= form.label :genre_nonfiction, "non-fiction" %>
+  </p>
+  <p>
     <%= form.label :owned_since %><br>
     <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
   </p>
