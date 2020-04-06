@@ -13,7 +13,7 @@
     <tr>
       <td><%= link_to item.title, item_path(item) %></td>
       <td><%= item.owned_since %></td>
-      <td><%= item.broken %></td>
+      <td><%= item.broken ? "yes" : "no" %></td>
       <td><%= item.location %></td>
       <td><%= item.info %></td>
       <td><%= link_to 'edit', edit_item_path(item)%> <%= link_to 'delete', item_path(item), method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
