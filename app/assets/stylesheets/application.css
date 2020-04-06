@@ -179,3 +179,10 @@ label, legend, fieldset {
   /*display: block;*/
   margin-bottom: .5rem;
   font-weight: 600; }
+th {
+  font-size: 1rem;
+}
+  td {
+  font-size: 0.95rem;
+  text-align: left;
+}
