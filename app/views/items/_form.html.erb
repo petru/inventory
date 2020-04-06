@@ -15,7 +15,7 @@
   </p>
   <p>
     <%= form.label :owned_since %><br>
-    <%= form.date_select :owned_since %>
+    <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
   </p>
   <p>
     <%= form.label :info %><br>
