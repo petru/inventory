@@ -1,0 +1,35 @@
+<%= form_with model: @item, local: true do |form| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+      <%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :owned_since %><br>
+    <%= form.date_select :owned_since %>
+  </p>
+  <p>
+    <%= form.label :info %><br>
+    <%= form.text_area :info, size: "60x12" %>
+  </p>
+  <p>
+    <%= form.check_box :broken %>
+    <%= form.label :broken, 'This item is broken' %>
+  </p>
+  <p>
+    <%= form.label :location, 'Location:' %><br>
+    <%= form.select(:location, [['Home', 1], ['My brother', 2], ['My mother',3]]) %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
