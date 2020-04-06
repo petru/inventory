@@ -15,4 +15,38 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+  <p>
+    <%= form.label :year, 'Year Published' %><br>
+    <%= form.text_field :year %>
+  </p>
+  <p>
+    <%= form.label :owned_since %><br>
+    <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
+  </p>
+  <p>
+    <%= form.label :format %><br>
+    <%= form.radio_button :format, "paperback" %>
+    <%= form.label :format_paperback, "paperback" %>
+    <%= form.radio_button :format, "hardcover" %>
+    <%= form.label :format_hardcover, "hardcover" %>
+    <%= form.radio_button :format, "pdf" %>
+    <%= form.label :format_pdf, "PDF" %>
+    <%= form.radio_button :format, "epubmobi" %>
+    <%= form.label :format_epubmobi, "EPUB/MOBI" %>
+  </p>
+  <p>
+    <%= form.check_box :read %>
+    <%= form.label :read %>
+  </p>
+  <p>
+    <%= form.label :notes %>
+    <%= form.text_area :notes, size: "60x12" %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
 <% end %>
