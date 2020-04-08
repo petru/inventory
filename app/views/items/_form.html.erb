@@ -1,4 +1,4 @@
-<%= form_with model: @item, local: true do |form| %>
+<%= simple_form_for @item do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -10,26 +10,11 @@
       </ul>
     </div>
   <% end %>
-  
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  
-  
-    <%= form.label :owned_since %>
-    <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
-  
-  
-    <%= form.label :info %>
-    <%= form.text_area :info, size: "60x12" %>
-  
-  
-    <%= form.check_box :broken %>
-    <%= form.label :broken, 'This item is broken' %><br>  
-  
-    <%= form.label :location, 'Location:' %>
-    <%= form.select(:location, [['Home', 1], ['My brother', 2], ['My mother',3]]) %>
-  
-  
-    <%= form.submit %>
-  
+  <%= f.input :title, label: "Item name" %>
+  <%= f.input :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
+  <%= f.input :broken, label: "This item is broken" %>
+  <%= f.input :info, label: "Additional info" %>
+  <%= f.input :location, label: "Item location: ", as: :radio_buttons, collection: [[1, 'Home'], [2, 'My brother'], [3,'My mother']], label_method: :second, value_method: :first %>
+  <%= f.submit %>
+
 <% end %>
