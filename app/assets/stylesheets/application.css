@@ -22,11 +22,9 @@ div.content {
   width: 70%;
   margin: 0 auto;
 }
-
-input {
-  margin: 1rem 0 2rem 0;
+div.input {
+  padding: 10px;
 }
-label {
-  letter-spacing: 0.2rem;
-  word-spacing: 0.3rem;
+.content h1 {
+  font-weight: bold;
 }
