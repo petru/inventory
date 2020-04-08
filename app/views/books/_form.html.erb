@@ -11,30 +11,19 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= form.label :title %><br>
+    <%= form.label :title %>
     <%= form.text_field :title %>
-  </p>
-  <p>
-    <%= form.label :author %><br>
+    <%= form.label :author %>
     <%= form.text_field :author %>
-  </p>
-  <p>
-    <%= form.label :year, 'Year Published' %><br>
+    <%= form.label :year, 'Year Published' %>
     <%= form.text_field :year %>
-  </p>
-  <p>
     <%= form.label :genre %><br>
     <%= form.radio_button :genre, "fiction", checked: true %>
     <%= form.label :genre_fiction, "fiction" %>
     <%= form.radio_button :genre, "nonfiction" %>
-    <%= form.label :genre_nonfiction, "non-fiction" %>
-  </p>
-  <p>
-    <%= form.label :owned_since %><br>
-    <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %>
-  </p>
-  <p>
+    <%= form.label :genre_nonfiction, "non-fiction" %><br>
+    <%= form.label :owned_since %>
+    <%= form.date_select :owned_since, start_year: 1990, end_year: Date.today.year, order: [:month, :day, :year] %><br>
     <%= form.label :format %><br>
     <%= form.radio_button :format, "paperback", checked: true%>
     <%= form.label :format_paperback, "paperback" %>
@@ -43,17 +32,11 @@
     <%= form.radio_button :format, "pdf" %>
     <%= form.label :format_pdf, "PDF" %>
     <%= form.radio_button :format, "epubmobi" %>
-    <%= form.label :format_epubmobi, "EPUB/MOBI" %>
-  </p>
-  <p>
+    <%= form.label :format_epubmobi, "EPUB/MOBI" %><br>
     <%= form.check_box :read %>
-    <%= form.label :read %>
-  </p>
-  <p>
+    <%= form.label :read %><br>
     <%= form.label :notes %>
     <%= form.text_area :notes, size: "60x12" %>
-  </p>
-  <p>
     <%= form.submit %>
-  </p>
+
 <% end %>
