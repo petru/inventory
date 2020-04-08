@@ -1,11 +1,11 @@
-<h1>Books</h1>
-<%= link_to "Add new", new_book_path %>
-<table>
+<%= link_to "+", new_book_path, class: "pull-right button primary" %>
+<h1>books</h1>
+<table class="striped">
   <tr>
     <th>Title</th>
     <th>Author</th>
     <th>Year published</th>
-    <th>Type</th>
+    <th>Genre</th>
     <th>Format</th>
     <th>Read?</th>
     <th>Notes</th>
