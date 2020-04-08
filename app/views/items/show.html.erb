@@ -1,3 +1,4 @@
+<h1>view item</h1>
 <p>
   <strong><%= @item.title %></strong>
 </p>
@@ -13,4 +14,10 @@
 <p>
   Info: <%= @item.info %>
 </p>
-<%= link_to 'Back', items_path %>
+<p>
+  Date added: <%= @item.created_at %>
+</p>
+<p>
+  Last modified: <%= @item.updated_at %>
+</p>
+<%= link_to 'Back', items_path, class: "button primary" %>
